@@ -113,7 +113,7 @@ input{
 }
 .container-promo{
     display: flex;
-    flex-wrap: wrap;
+    
     gap: 17px;
 }
 .test{
@@ -593,7 +593,7 @@ input{
 }
 .item-big-promo{
     min-height: 492px;
-    width:max(700px, 850px);
+    width:60%;
     border-radius: 20px;
     padding: 103px 36px 103px 36px;
     box-sizing: border-box;
@@ -602,6 +602,7 @@ input{
     row-gap: 48px;
 }
 .pormo-contnet--container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 9px;
