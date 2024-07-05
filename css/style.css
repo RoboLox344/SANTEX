@@ -99,8 +99,7 @@ button{
     --bg-shadow-hover-color:#555555;
 } 
 .center{
-    flex-shrink: 1;
-    
+    text-align: center;
 }
 input{
     all: unset;
@@ -118,6 +117,9 @@ input{
 }
 .test{
     outline:  1px solid red;
+}
+.none{
+    display: none;
 }
 .container-header{
     position: sticky;
@@ -1424,11 +1426,69 @@ input{
       fill:#A47312;
     }
   }
+.wp-persAcc{
+    display: flex;
+    gap: 45px;
+    align-items: start;
+}
+.persAcc-categori-wp{
+    max-width: 310px;
+    width: 100%;
+    min-height: 431px;
+    box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
+    transition:  box-shadow 700ms ease-in-out;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+.persAcc-data-wp{
+    max-width: 985px;
+    width: 100%;
+    min-height: 803px;
+    box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
+    transition:  box-shadow 700ms ease-in-out;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+.persAcc-categori-wp:hover, .persAcc-data-wp:hover{
+    box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
+}
+.text-acc--myAcc, .categor-text{
+    color: var(--supp-text-color);
+}
+.categor-text{
+    font-size: 15px;
+    font-weight: 400;
+    padding-top:1px ;
+    box-sizing: border-box;
+    min-height: 18px;
+}
+.text-acc--myAcc{
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 18px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+.categor-item{
+    min-height: 40px;
+    padding: 11px 0 11px 25px ;
+    box-sizing: border-box; 
+    cursor: pointer;
+}
+.categor-item-cont{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
 @media (min-width: 992px) and (max-width: 1199px) { 
     .hits-slider { 
         grid-auto-columns: calc((100% / 4) - 9px); 
-  
     } 
+    .persAcc-categori-wp{
+        max-width: 260px;
+    }
     .reviews-wrapper{
         grid-auto-columns: calc((100% / 2) - 12px); 
     }
@@ -1452,6 +1512,9 @@ input{
 @media (min-width: 768px) and (max-width: 991px) {
     .hits-slider { 
         grid-auto-columns: calc((100% / 3) - 9px); 
+    }
+    .persAcc-categori-wp{
+        max-width: 210px;
     }
     .wrap-cart-sale{
         grid-template-columns: repeat( 2, 1fr);
