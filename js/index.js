@@ -1,3 +1,4 @@
+document.body.style.background = '#0D1115';
 const CATALOG__HITS__Base = [
   {
       id:'el1',
@@ -132,8 +133,20 @@ const CATALOG__SALE__Base = [
       sale: '13%',
   },
 ];
-
-document.body.style.background = '#0D1115';
+const USER_BASE =[
+    {
+        Login:'ilya12345',
+        Password:'ilya12345'
+    },
+    {
+        Login:'anya12345',
+        Password:'anya12345'
+    },
+    {
+        Login:'fadi12345',
+        Password:'fadi12345'
+    },
+];
 const LoginButton = document.querySelector('.button-login');//кнопка логина 
 const ModalLogin = document.querySelector('.modal-login');//серый экран заднего фона входа
 const BtnLoginEx = document.querySelector('.button-modal--exit'),//кнопка выхода на форме входа
@@ -144,7 +157,7 @@ const TransitionToRegistration = document.querySelector('.modal-text-regist'),//
 TransitionToLogin = document.querySelector('.modal-text-entry');//кнопка перехода к входа
 const ButtonCatalog = document.querySelector('.drop-button');//кнопка для выпад списка каталог
 const ModalCatalogList = document.querySelector('.modal-catalog');
-
+//онка регистрации
 LoginButton.onclick = function aaa(){
     ModalLogin.style.display = 'block';
     ModalWinowEntry.classList.add('login-activ');
@@ -180,7 +193,22 @@ window.onclick = function (event) {
     } 
     
   }; 
-
+//воход в сущ аккаунт
+document.getElementById('ButtonEntrance').addEventListener("click", function(){
+    var UserLogin = document.getElementById('Login').value;
+    var UserPassword = document.getElementById('Password').value;
+    if (UserLogin == 'ilya12345' && UserPassword == 'ilya12345'){
+        document.getElementById('ButtonEntrance').setAttribute('href', 'acc.html');
+        
+    }else if (UserLogin == 'ilya12345' && UserPassword !== 'ilya12345'){
+        alert('Неверный  пароль')
+    }else if (UserLogin !== 'ilya12345' && UserPassword == 'ilya12345'){
+        alert('Неверный логин ')
+    }else if (UserLogin !== 'ilya12345' && UserPassword !== 'ilya12345'){
+        alert('Неверный логи или пароль')
+    }
+        
+});
 //выпад меню каталог
 document.addEventListener("DOMContentLoaded", function() { 
 ButtonCatalog.addEventListener('click', function CatalogList(){
@@ -423,3 +451,4 @@ class ProductsSale{
 
 const ProductsSalePage = new ProductsSale();
 ProductsSalePage.render();
+
