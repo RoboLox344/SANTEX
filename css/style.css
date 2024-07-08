@@ -108,7 +108,8 @@ input{
     margin: 0 auto;
     margin-bottom: 70px;
     max-width: 1340px;
-    padding: 0 30px;    
+    padding: 0 30px;   
+    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out; 
 }
 .container-promo{
     display: flex;
@@ -798,7 +799,7 @@ input{
 }
 .cart-wrapper{
     scroll-snap-align: start; 
-    height: 340px; 
+    height: 350px; 
     background:var(--main-color); 
     border-radius: 20px; 
     display: flex; 
@@ -1108,7 +1109,7 @@ input{
     height: 100%;
     display: grid;
     grid-template-columns: repeat( 4, 1fr);
-    column-gap: 30px;
+    column-gap: 15px;
     row-gap: 38px;
     grid-template-rows: repeat(auto-fill, 350px);
     overflow: hidden;
@@ -1451,9 +1452,6 @@ input{
     background-color: var(--main-color);
     border-radius: 15px;
 }
-.persAcc-categori-wp:hover, .persAcc-data-wp:hover{
-    box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
-}
 .text-acc--myAcc, .categor-text{
     color: var(--supp-text-color);
 }
@@ -1482,6 +1480,85 @@ input{
     align-items: center;
     gap: 9px;
 }
+.text-hd--katalog{
+    color: var(--main-text-color);
+    font-size: 30px;
+    font-weight: 600;
+    padding-left:28px ;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.sub-catalog-wp{
+    width: 100%;
+    
+    padding: 18px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 23px;
+    column-gap: 26px;
+}
+.sub-catalog--item{
+    padding: 13px 23px 12px;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
+    transition:  box-shadow 700ms ease-in-out;
+    border-radius: 15px;
+    height: 54px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-text-color);
+    vertical-align:middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wp-otoplenie{
+    position: relative;
+    display: flex;
+    min-height: 200px;
+    align-items: start;
+    gap: 28px;
+}
+.filter-wp{
+    box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
+    transition:  box-shadow 700ms ease-in-out;
+    background-color: var(--main-color);
+    min-height: 774px;
+    max-width: 288px;
+    width: 100%;
+    border-radius: 10px;
+}
+.catalog-wp{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 38px;
+    grid-template-rows: repeat(auto-fill, 350px);
+    max-width: 1024px;
+    width: 100%;
+    min-height: 1121px;
+}
+.more{
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: 'Показать еще';
+    padding: 5px 40px;
+    box-sizing: border-box;
+    max-width: 150px;
+    min-height: 40px;
+    border-radius: 15px;
+    width: 100%;
+    background-color: #535980;
+}
+.persAcc-categori-wp:hover, .persAcc-data-wp:hover, .sub-catalog--item:hover
+, .filter-wp:hover{
+    box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
+}
 @media (min-width: 992px) and (max-width: 1199px) { 
     .hits-slider { 
         grid-auto-columns: calc((100% / 4) - 9px); 
@@ -1506,6 +1583,9 @@ input{
     }
     .item-big-promo{
         width: 100%;
+    }
+    .catalog-wp{
+        grid-template-columns: repeat( 3, 1fr);
     }
     
 }
