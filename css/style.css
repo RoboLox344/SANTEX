@@ -1543,17 +1543,25 @@ input{
 }
 .more{
     position: absolute;
-    bottom: -55px;
+    bottom: -57px;
     left: 50%;
     transform: translateX(-50%);
     content: 'Показать еще';
-    padding: 5px 40px;
+    padding: 15px 40px;
     box-sizing: border-box;
-    max-width: 150px;
-    min-height: 40px;
+    max-width: 190px;
+    text-align: center;
     border-radius: 15px;
     width: 100%;
-    background-color: #535980;
+    background-color: var(--main-color);
+    outline: 1px solid var(--main-text-color);
+    color: var(--main-text-color);
+    transition: color 300ms ease-in-out, outline-color 300ms ease-in-out;
+    cursor: pointer;
+}
+.more:hover{
+    color: var(--supportive-color);
+    outline-color: var(--supportive-color);
 }
 .persAcc-categori-wp:hover, .persAcc-data-wp:hover, .sub-catalog--item:hover
 , .filter-wp:hover{
