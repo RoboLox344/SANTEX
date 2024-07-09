@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/Sb-Cat-Otop.js"></script>
     <script defer src="js/haeder-footer.js"></script>
+    <script defer src="js/filter.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -178,7 +179,39 @@
             <div class="container">
                 <div class="wp-otoplenie">
                     <div class="filter-wp">
-                        
+                        <div class="producer-list" id="producer">
+                            <h3 class="haeding-filter">Производитель</h3>
+                            <ul class="producer-list-item--wp">
+                                <!-- Производители -->
+                            </ul>
+                        </div>
+                        <div class="filter-scroll-wp" id="FiterScroll">
+                            <h3 class="haeding-filter" id="PriceFilter">Цена</h3>
+                            <div class="filter-scroll-content-wp">
+                                <div class="controller-wp">
+                                    <div class="controller-line">
+                                        <!-- палка двигалка -->
+                                        <div class="controller-stick stick-left"></div>
+                                        <div class="controller-stick stick-right"></div>
+                                    </div>
+                                </div>
+                                <div class="price-wp">
+                                    <p class="price-filter-text">Цена:</p>
+                                    <span class="filter-price-min">39$</span>
+                                    <span class="tire">-</span>
+                                    <span class="filter-price-max">129$</span>
+                                </div>
+                                <div class="button-filter-wp">
+                                <button class="button button-filter">Применить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="characteristic-wp" id="characteristic">
+                            <h3 class="haeding-filter">Характеристки</h3>
+                            <ul class="characteristic-list-item--wp">
+                                <!-- Характеристки -->
+                            </ul>
+                        </div>
                     </div>
                     <div class="catalog-wp " id="catalog-wp">
                         <!-- карточки товара -->
