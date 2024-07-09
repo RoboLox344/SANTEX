@@ -111,7 +111,7 @@ class ProductsSale{
                                             </g>
                                         </svg>
                                     </a>
-                                    <a class="nav-cart-cont" href="#">
+                                    <a class="nav-cart-cont" href="TovarPage.html">
                                         <svg width="21" height="20" viewBox="0 0 21 20" fill="#7880B5" xmlns="http://www.w3.org/2000/svg" class="svg-lups">
                                             <g clip-path="url(#clip0_203_1042)">
                                             <rect x="0.078125" y="-0.00439453" width="19.9913" height="20" fill="#252525"/>
@@ -128,7 +128,7 @@ class ProductsSale{
                                         <p>акция</p>
                                     </div>
                                 </div>
-                                <a href="#" class="wrapper-tover--ref">
+                                <a href="TovarPage.html" class="wrapper-tover--ref">
                                     <div class="img-tover-center">
                                         <img class="img-tovar" src="${img}" alt="товар" >
                                     </div>
