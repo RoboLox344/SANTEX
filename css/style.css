@@ -1582,9 +1582,6 @@ input{
     color: var(--supportive-color);
     outline-color: var(--supportive-color);
 }
-.producer-list{
-    
-}
 .producer-list-item--wp, .characteristic-list-item--wp{
     display: flex;
     flex-direction: column;
@@ -1672,11 +1669,6 @@ input{
 }
 .characteristic-name, .producer-name{
     cursor: pointer;
-}
-.button-filter-wp{
-   /*  display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 .persAcc-categori-wp:hover, .persAcc-data-wp:hover, .sub-catalog--item:hover
 , .filter-wp:hover{
