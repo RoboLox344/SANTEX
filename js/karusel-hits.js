@@ -13,7 +13,7 @@ const CATALOG__HITS__Base = [
     {
         id:'el2',
         name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-        img:'img/tovar.png',
+        img:'img/dush.png',
         price: '9 000$',
         art:'23423423423',
         sale: '13%',
@@ -29,7 +29,7 @@ const CATALOG__HITS__Base = [
     {
         id:'el4',
         name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-        img:'img/tovar.png',
+        img:'img/dush.png',
         price: '9 000$',
         art:'23423423423',
         sale: '13%',
@@ -37,7 +37,7 @@ const CATALOG__HITS__Base = [
     {
         id:'el5',
         name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-        img:'img/tovar.png',
+        img:'img/dush.png',
         price: '9 000$',
         art:'23423423423',
         sale: '13%',
@@ -53,7 +53,7 @@ const CATALOG__HITS__Base = [
     {
         id:'el7',
         name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-        img:'img/tovar.png',
+        img:'img/dush.png',
         price: '9 000$',
         art:'23423423423',
         sale: '13%',
