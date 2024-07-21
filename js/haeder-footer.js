@@ -1,4 +1,4 @@
-document.body.style.background = '#0D1115';
+document.body.classList.add('dark-theme');
 
 const LoginButton = document.querySelector('.button-login');//кнопка логина 
 const ModalLogin = document.querySelector('.modal-login');//серый экран заднего фона входа

@@ -3,7 +3,7 @@ const CATALOG__SALE__Base = [
   {
       id:'el1',
       name:'Насосная группа без смесителя Rommer - Ду25 (без насоса)',
-      img:'img/tovar.png',
+      img:'img/tualet-noFon.png',
       price: '10 000$',
       art:'23423423423',
       sale: '14%',
@@ -19,7 +19,7 @@ const CATALOG__SALE__Base = [
   {
       id:'el3',
       name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-      img:'img/tovar.png',
+      img:'img/tualet-noFon.png',
       price: '9 000$',
       art:'23423423423',
       sale: '11%',
@@ -35,7 +35,7 @@ const CATALOG__SALE__Base = [
   {
       id:'el5',
       name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-      img:'img/tovar.png',
+      img:'img/dush.png',
       price: '7 000$',
       art:'23423423423',
       sale: '15%',
@@ -60,7 +60,7 @@ const CATALOG__SALE__Base = [
   {
       id:'el8',
       name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-      img:'img/tovar.png',
+      img:'img/dush.png',
       price: '8 000$',
       art:'23423423423',
       sale: '13%',
