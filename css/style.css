@@ -89,8 +89,18 @@ button{
     display: inline-block;
     margin: 0;
   }
+body.dark-theme{
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+}
+body.light-theme{
+    background-color: var(--main-color-white);
+    color: var(--main-text-colo-light);
+}
 :root{
     --main-color:#0D1115;
+    --main-color-white:#fff;
+    --main-text-colo-light:#0D1115;
     --supportive-color:#7880B5;
     --decorative-color:#F6D863;
     --main-text-color:#fff;
@@ -186,6 +196,35 @@ input{
     position: relative;
     overflow: hidden;
     transition: background-color 300ms ease-in, color 300ms ease-in-out, outline 300ms ease-in-out, stroke 300ms ease-in-out, fill 300ms ease-in-out;
+    cursor: pointer;
+}
+.button-pers-info--save{
+    max-width: 131px;
+    min-height: 40px;
+    background-color: var(--supportive-color);
+    border-radius: 3px;
+    border: none;
+    padding: 13px 24px 12px;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+}
+.button-pers-info--change{
+    max-width: 120px;
+    min-height: 40px;
+    background-color: var(--supportive-color);
+    border-radius: 3px;
+    border: none;
+    padding: 9px 15px 8px;
+    box-sizing: border-box;
+    color: var(--main-text-color);
+}
+.button-pers-info--back{
+    border: none;
+    color: var(--supp-text-color);
+    transition: color 300ms ease-in-out;
+}
+.button-pers-info--back:hover{
+    color: var(--supportive-color);
 }
 .button-modal--exit{
     position: absolute;
@@ -310,6 +349,13 @@ input{
     min-height: 45px;
     margin-bottom: 36px;
 }
+.button-adress-category{
+    box-sizing: border-box;
+    padding: 10px 14px 9px;
+    background-color: var(--supportive-color);
+    color: var(--main-text-color);
+    border-radius: 3px;
+}
 .googl-continue-button, .fs-continue-button{
     box-sizing: border-box;
     padding: 14px 96px;
@@ -364,7 +410,7 @@ input{
 .input-entry-password{
     margin-bottom: 20px;
 }
-.input-entry-login {
+.input-entry-login, .input-entry-password, .input-entry-pers-info {
     background-color: var(--main-color);
     border-radius: 5px;
     border: 1px solid var(--main-text-color);
@@ -388,26 +434,64 @@ input{
     width: 100%;
     min-height: 40px;
 }
-
+.input-pers-info-wp{
+    margin-bottom: 26px;
+}
+.input-pers-info-wp--flex{
+    display: flex;
+    gap: 21px;
+    align-items: center;
+}
+.input-pers-info-wp-no-bottom{
+    margin-bottom: 0;
+}
 .input-PasswordConfrm{
     margin-bottom: 20px;
 }
-.input-entry-password{
-    background-color: var(--main-color);
-    border-radius: 5px;
-    border: 1px solid var(--main-text-color);
-    color: var(--main-text-color);
-    font-size: 14px;
+.inuput-pers-info-name, .input-adress-category-wp{
+    color: var(--supp-text-color);
+    font-size: 15px;
     font-weight: 400;
-    padding: 12px 14px;
+    margin-bottom: 10px;
+    padding-right: 12px;
     box-sizing: border-box;
-    width: 100%;
-    min-height: 40px;
 }
-/* .input-search input:focus~label,
-.input-search input:valid~label{
-    border:  1px solid var(--supportive-color);
-} */
+.input-adress-category-wp{
+    margin-bottom:27px;
+}
+.inuput-pers-info-name--foto{
+    margin-bottom: 5.5px;
+}
+.foto-pers-info-wp{
+    min-height: 50px;
+    max-width: 50px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: var(--bg-shadow-statick-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms ease-in-out;
+}
+.button-pers-info{
+    max-width: 24px;
+    height: 24px;
+}
+.button-pers-info-svg{
+    stroke:var(--supportive-color);
+    transition: stroke 300ms ease-in-out;
+}
+.foto-pers-info-wp:hover .button-pers-info-svg{
+    stroke: var(--main-color);
+}
+.foto-pers-info-wp:hover{
+    background-color: var(--supportive-color);
+}
+.bg-inuput-pers-info-name{
+    background-image: url('../img/zvezda-obyz.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+}
 .nav-text{
     position: relative;
     font-size: 16px;
@@ -1274,7 +1358,7 @@ input{
 .reviews-wrapper{
     display: grid;
     grid-auto-flow: column; 
-    grid-auto-columns: calc((100% / 3) -12px); 
+    grid-auto-columns: calc((100% / 3) - 20px); 
     gap: 31px; 
     overflow-x: auto; 
     min-height: 349px;
@@ -1459,6 +1543,9 @@ input{
     align-items: start;
 }
 .persAcc-categori-wp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 310px;
     width: 100%;
     min-height: 431px;
@@ -1472,11 +1559,21 @@ input{
 .persAcc-data-wp{
     max-width: 985px;
     width: 100%;
-    min-height: 803px;
+    padding: 46px 48.5px;
+    min-height:100px;
+    box-sizing: border-box;
     box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
-    transition:  box-shadow 700ms ease-in-out;
+    position: relative;
     background-color: var(--main-color);
     border-radius: 15px;
+    overflow: hidden;
+    transition: height 400ms ease-in-out, box-shadow 700ms ease-in-out ;
+}
+.adress-category-bg{
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    z-index: 0;
 }
 .text-acc--myAcc, .categor-text{
     color: var(--supp-text-color);
@@ -1487,6 +1584,12 @@ input{
     padding-top:1px ;
     box-sizing: border-box;
     min-height: 18px;
+    transition: color 300ms ease-in-out;
+    cursor: pointer;
+}
+.categor-text-active{
+    color: var(--supportive-color);
+    transition: color 300ms ease-in-out;
 }
 .text-acc--myAcc{
     font-size: 18px;
@@ -1496,15 +1599,53 @@ input{
     margin-bottom: 16px;
 }
 .categor-item{
+    position: relative;
     min-height: 40px;
     padding: 11px 0 11px 25px ;
     box-sizing: border-box; 
-    cursor: pointer;
+   
+}
+.line-categori{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 5px;
+    background-color: var(--supportive-color);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+.line-active{
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
 }
 .categor-item-cont{
     display: flex;
     align-items: center;
     gap: 9px;
+}
+.svg-categori{
+    fill: #A9A4A4;
+    transition: fill 300ms ease-in-out;
+}
+.svg-categori-stroke{
+    fill: none;
+    stroke:#A9A4A4 ;
+    transition: stroke 300ms ease-in-out;
+}
+.svg-categori-active{
+    fill: var(--supportive-color);
+    transition: fill 300ms ease-in-out;
+}
+.svg-categori-stroke-active{
+    stroke: var(--supportive-color);
+    transition: stroke 300ms ease-in-out;
+}
+.categori-exit-wp{
+ padding-top: 10px;
+ box-sizing: border-box;
+ border-top:1px solid var(--supportive-color);
 }
 .text-hd--katalog{
     color: var(--main-text-color);
@@ -1544,7 +1685,7 @@ input{
     align-items: center;
     justify-content: center;
 }
-.wp-otoplenie, .wp-santex{
+.wp-otoplenie, .wp-santex, .wp-instrum{
     position: relative;
     display: flex;
     min-height: 200px;
@@ -1926,8 +2067,221 @@ input{
 .tabs-panel-text{
     max-width: 60%;
 }
+.basket-wp{
+    display: flex;
+    min-height: 531px;
+    width: 100%;
+    gap: 22px;
+    align-items: start;
+    min-height: 100px;
+    
+}
+.basket-products-wp{
+    max-width: 959px;
+    width: 100%;
+    box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
+    transition:  box-shadow 700ms ease-in-out;
+    border-radius: 15px;
+    padding: 31px 27px;
+    box-sizing: border-box;
+}
+.basket-info-wp{
+    min-height: 531px;
+    max-width: 359px;
+    width: 100%;
+    padding: 30px 27px;
+    box-sizing: border-box;
+    box-shadow:  0px 0px 10px var(--bg-shadow-statick-color);
+    transition:  box-shadow 700ms ease-in-out;
+    border-radius: 15px;
+    
+}
+.personal-information-category-wp, .adress-category-wp, .favourites-category-wp,
+.оrders-category-wp, .support-category-wp, .basket-category-wp {
+    order: 1;
+    opacity: 0;
+    transition: transform 500ms ease-in-out, opacity 100ms ease-in-out, order 400ms ease-in-out;
+    z-index: 2;
+}
+.persAcc-data-active{
+    
+    order: -1;
+    opacity: 1;
+    transition: transform 500ms ease-in-out, opacity 300ms ease-in-out, order 200ms ease-in-out;
+}
+.pers-info-content-wp, .adress-category-content-wp{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap:40px;
+    width: 100%;
+    z-index: 1;
+}
+.pers-info-item, .adress-category-item{
+    width: 100%;
+    min-height: 100px;
+}
+.pers-info-passwor-item{
+    width: 100%;
+    min-height: 291px;
+}
+.heading-text-pers-info{
+    font-size:16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.ferst-pers-info-wp, .second-pers-info-wp, .ferst-adress-category-wp{
+    max-width: 417px;
+    width: 100%;
+}
+.adress-categor-text-wp{
+    color: var(--main-text-color);
+}
+.pers-info-form-wp, .info-passwor-form-wp, .adress-category-form-wp{
+    display: flex;
+    gap: 54px;
+}
+.heading-text-odrers{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--main-text-color);
+    margin-bottom: 50px;
+}
+.order-item-wp{
+    min-height: 209px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.order-item{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+.order-way{
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.order-number{
+    color: var(--supportive-color);
+}
+.order-date{
+    color: var(--decorative-color);
+}
+.order-details-wp{
+    display: flex;
+    justify-content: center;
+}
+.order-details{
+    display: flex;
+    max-width: 622px;
+    width: 100%;
+    min-height: 125px;
+}
+.order-step-img-wp{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    min-height: 100px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: var(--supp-text-color);
+    overflow: hidden;
+    outline: 1px solid var(--supp-text-color);
+}
+.order-step-ready{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 17, 21, 0.6);
+}
+.svg-ready-order{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.order-step-1, .order-step-2, .order-step-3{
+    max-width: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.order-step-img-wp-active{
+ outline: 2px solid var(--decorative-color);
+}
+.order-text-status{
+    color: var(--supp-text-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.order-text-status-active{
+    color: var(--decorative-color);
+}
+.step-img-size{
+    max-width: 100px;
+    min-height: 100px;
+    width: 100%;
+}
+.order-line-wp{
+    position: relative;
+    max-width: 171px;
+    width: 100%;
+}
+.order-line-way{
+    position: absolute;
+    left: 0;
+    top: 55%;
+    border-top: 1px solid var(--supp-text-color);
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--supp-text-color);
+}
+@keyframes svg-rout {
+    0%{
+        transform:translateX(2%);
+    }
+    
+    100%{
+        transform:translateX(520%);
+    }
+}
+.order-svg{
+    position: absolute;
+    top: -130%;
+    left: 2%;
+    display: none;
+
+}
+.order-svg-active{
+    display: block;
+    animation-duration: 10s;
+    animation-name:  svg-rout;
+    animation-iteration-count: infinite;
+    
+}
+.order-details-definite{
+    color: var(--supp-text-color); 
+    transition: color 300ms ease-in-out;
+}
+.order-details-definite:hover{
+    color: #DDDDDD;
+}
+.order-line{
+    border-radius: 4px;
+    border:1px solid var(--supp-text-color); ;
+}
 .persAcc-categori-wp:hover, .persAcc-data-wp:hover, .sub-catalog--item:hover
-, .filter-wp:hover, .dop-foto-prod-item:hover, .main-foto-wp:hover{
+, .filter-wp:hover, .dop-foto-prod-item:hover, .main-foto-wp:hover, .basket-products-wp:hover, .basket-info-wp:hover{
     box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
 }
 @media (max-width: 1250px){
@@ -2011,7 +2365,7 @@ input{
     .conatainer-footer{
         padding: 30px;
     }
-    .wp-otoplenie, .wp-santex{
+    .wp-otoplenie, .wp-santex,.wp-instrum{
         flex-direction: column;
     }
     .filter-wp{
