@@ -2103,6 +2103,78 @@ input{
     transition: transform 500ms ease-in-out, opacity 100ms ease-in-out, order 400ms ease-in-out;
     z-index: 2;
 }
+.heading-favourites-text{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--main-text-color);
+    margin-bottom: 20px;
+}
+.favourites-item-list-wp{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.favourites-item-wp{
+    display: flex;
+    width: 100%;
+    min-height: 131px;
+    outline: 2px solid var(--supp-text-color);
+    border-radius: 10px;
+    padding: 14px 31px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.favourites-price-wp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.favourites-price-button-wp{
+    display: flex;
+    gap: 10px;
+}
+.favourites-button-wp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 86px;
+    width: 100%;
+    gap: 16px;
+}
+.favourites-img-description-wp{
+    display: flex;
+    gap: 25px;
+    margin-right: 20px;
+}
+.favourites-text{
+    font-size: 16px;
+    font-weight: 600;
+}
+.favourites-price-text{
+    font-size: 20px;
+    font-weight: 600;
+}
+.favourites-description{
+    max-width: 203px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.favourites-description-wp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favourites-img{
+    height: 104px;
+    max-width: 138px;
+    width: 100%;
+
+}
 .persAcc-data-active{
     
     order: -1;
