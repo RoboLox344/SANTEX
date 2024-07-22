@@ -21,7 +21,7 @@ const CATALOG__HITS__Base = [
     {
         id:'el3',
         name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-        img:'img/tovar.png',
+        img:'img/gazona-kosilka-NoFon.png',
         price: '9 000$',
         art:'23423423423',
         sale: '13%',
@@ -53,7 +53,7 @@ const CATALOG__HITS__Base = [
     {
         id:'el7',
         name:'Насосная группа  смесителя Rommer - Ду25 (без насоса)',
-        img:'img/dush.png',
+        img:'img/gazona-kosilka-NoFon.png',
         price: '9 000$',
         art:'23423423423',
         sale: '13%',
