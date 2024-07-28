@@ -63,6 +63,9 @@ body{
     font-family: 'Bitter',  sans-serif ;
     position: relative;
   }
+.no-scroll-body{
+    overflow: hidden;
+}
 a{
     text-decoration: none;
     color: var(--main-text-color);
@@ -608,6 +611,15 @@ input{
     width: 100%;
     height: 100vh;
     z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.modal-login-active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .catatlog-list{
     padding-top: 30px;
@@ -620,13 +632,13 @@ input{
 }
 .wraper-modal-login{
     display: block;
-    position: absolute;
+    position: fixed;
     top:50%;
     left: 50%;
     box-sizing: border-box;
     background-color: var(--main-color);
     padding: 51px 100px 40px;
-    transform: translate(-50%, -50%) scale(0);
+    transform:  scale(0);
     width: 500px;
     min-height: 600px;
     display: flex;
@@ -638,25 +650,29 @@ input{
 }
 .wraper-modal-entry{
     display: block;
-    position: absolute;
+    position: fixed;
     top:50%;
     left: 50%;
     box-sizing: border-box;
     background-color: var(--main-color);
     padding: 51px 100px 92px;
-    transform: translate(-50%, -50%) scale(0);
+    transform:  scale(0);
     max-width: 500px;
     min-height: 500px;
     display: flex;
     flex-direction: column;
     transition: transform .5s ease-in-out;
     visibility: hidden;
+    
 }
 
 .login-activ{
+    position: relative;
+    top: 0;
+    left: 0;
     visibility: visible;
     opacity: 1;
-    transform: translate(-50%,-50%) scale(1);;
+    transform:scale(1);;
     animation: LogoCh 3s;
 
 }
@@ -2518,7 +2534,13 @@ input{
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .wraper-modal-entry{
-        padding: 41px 70px 82px;
+        padding: 31px 50px 31px;;
+    }
+    .wraper-modal-login{
+        padding: 31px 50px 31px;
+    }
+    .modal-login{
+        height: 100%;
     }
     .hits-slider { 
         grid-auto-columns: calc((100% / 3) - 9px); 
@@ -2596,7 +2618,10 @@ input{
 }
 @media (min-width: 481px) and (max-width:767px){
     .wraper-modal-entry{
-        padding: 31px 50px 62px;
+        padding: 31px 50px 31px;
+    }
+    .wraper-modal-login{
+        padding: 31px 50px 31px;
     }
     .modal-login{
         height: 100%;
