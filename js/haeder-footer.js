@@ -12,12 +12,14 @@ const ButtonCatalog = document.querySelector('.drop-button');//кнопка дл
 const ModalCatalogList = document.querySelector('.modal-catalog');
 //онка регистрации
 LoginButton.onclick = function aaa(){
-    ModalLogin.style.display = 'block';
+    ModalLogin.classList.add('modal-login-active');
     ModalWinowEntry.classList.add('login-activ');
+    document.body.classList.add('no-scroll-body')
 
     BtnLoginEx.addEventListener('click', function CloseModalLogin(){
-      ModalLogin.style.display = 'none';
+      ModalLogin.classList.remove('modal-login-active');
       ModalWinowLogin.classList.remove('login-activ');
+      document.body.classList.remove('no-scroll-body')
     });
 
     TransitionToLogin.addEventListener('click', function OpenLogin(){
@@ -32,8 +34,9 @@ LoginButton.onclick = function aaa(){
     });
 
     BtnLoginExx.addEventListener('click', function CloseModalRegister(){
-      ModalLogin.style.display = 'none';
+      ModalLogin.classList.remove('modal-login-active');
       ModalWinowLogin.classList.remove('login-activ');
+      document.body.classList.remove('no-scroll-body')
     });
 
     
@@ -41,8 +44,9 @@ LoginButton.onclick = function aaa(){
 
 window.onclick = function (event) {
     if (event.target == ModalLogin) {
-      ModalLogin.style.display = 'none';
+      ModalLogin.classList.remove('modal-login-active');
       ModalWinowLogin.classList.remove('login-activ');
+      document.body.classList.remove('no-scroll-body')
     } 
     
   }; 
