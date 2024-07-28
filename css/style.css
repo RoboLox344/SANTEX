@@ -2501,6 +2501,12 @@ input{
     .hits-slider { 
         grid-auto-columns: calc((100% / 4) - 9px); 
     } 
+    .wraper-modal-entry{
+        padding: 31px 50px 31px;;
+    }
+    .wraper-modal-login{
+        padding: 31px 50px 31px;
+    }
     .persAcc-categori-wp{
         max-width: 260px;
     }
