@@ -2657,7 +2657,7 @@ input{
     }
 
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
     .wraper-modal-entry{
         padding: 31px 50px 31px;
     }
