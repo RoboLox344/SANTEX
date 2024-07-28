@@ -637,7 +637,7 @@ input{
     left: 50%;
     box-sizing: border-box;
     background-color: var(--main-color);
-    padding: 51px 100px 40px;
+    padding: 31px 100px 31px;
     transform:  scale(0);
     width: 500px;
     min-height: 600px;
@@ -655,7 +655,7 @@ input{
     left: 50%;
     box-sizing: border-box;
     background-color: var(--main-color);
-    padding: 51px 100px 92px;
+    padding: 31px 100px 31px;
     transform:  scale(0);
     max-width: 500px;
     min-height: 500px;
