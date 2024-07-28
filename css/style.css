@@ -208,6 +208,18 @@ input{
     box-sizing: border-box;
     color: var(--main-text-color);
 }
+.button-korzina{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    min-height: 50px;
+    color:var(--main-text-color);
+    padding: 0 15px;
+    box-sizing: border-box;
+}
 .button-pers-info--change{
     max-width: 120px;
     min-height: 40px;
@@ -244,13 +256,13 @@ input{
 }
 .button-promo{
     max-width: 216px;
+    padding: 12px 18px;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
     background-color: var(--supportive-color);
     color: var(--main-text-color);
     box-sizing: border-box;
-    padding: 12px 18px;
     border-radius: 6px;
     z-index: 0;
 }
@@ -396,15 +408,15 @@ input{
 }
 .input-search{
     width: max(100px,208px);
+    min-height: 23px;
+    font-size: 12px;
+    padding: 5px 10px;
+    font-weight: 400;
+    color: var(--main-text-color);
+    text-align: start;
     background-color: var(--main-color);
     border-radius: 200px;
     border:1px solid var(--supportive-color);
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--main-text-color);
-    min-height: 23px;
-    text-align: start;
-    padding: 5px 10px;
     box-sizing: border-box;
 }
 .input-entry-password{
@@ -634,7 +646,7 @@ input{
     padding: 51px 100px 92px;
     transform: translate(-50%, -50%) scale(0);
     max-width: 500px;
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     transition: transform .5s ease-in-out;
@@ -2124,15 +2136,19 @@ input{
     box-sizing: border-box;
     justify-content: space-between;
 }
-.favourites-price-wp{
+.favourites-price-wp, .basket-price-wp, .basket-count-wp{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     max-width: 200px;
+    min-width: 100px;
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
+}
+.basket-count-wp{
+    display: flex;
 }
 .favourites-price-button-wp{
     display: flex;
@@ -2158,6 +2174,33 @@ input{
 .favourites-price-text{
     font-size: 20px;
     font-weight: 600;
+}
+.basket-count-counter-wp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.basket-button-subtract, .basket-button-addition{
+    background-color: var(--supportive-color);
+    width:21.71px;
+    height: 25px;
+    border-radius: 29px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 300ms ease-in-out;
+}
+.basket-button-addition:hover{
+    background-color: #535980;
+}
+.basket-button-subtract:hover{
+    background-color: #535980;
+}
+.basket-quantity{
+    color: var(--supp-text-color);
+    font-size: 17px;
 }
 .favourites-description{
     max-width: 203px;
@@ -2352,6 +2395,76 @@ input{
     border-radius: 4px;
     border:1px solid var(--supp-text-color); ;
 }
+.kozina-modal-container-wp{
+    position: fixed;
+    top: 215px;
+    flex-direction: column;
+    transform: translateX(80%);
+    transition: transform 500ms ease-in-out, opacity 300ms ease-in-out ;
+    opacity: 0;
+    gap: 30px;
+    right:0;
+    display: flex;
+    max-width: 415px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 18px;
+    box-sizing: border-box;
+    background-color: rgba(120, 128, 181, 0.6);
+    z-index: 10;
+}
+.kozina-modal-container-wp-active{
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 500ms ease-in-out, opacity 300ms ease-in-out ;
+}
+.kozina-modal-wp{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.kozina-cart-wp{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    min-height: 89px;
+    max-width: 379px;
+    width: 100%;
+    transition: gap 1000ms ease-in-out;
+}
+.kozina-cart-item{
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 300ms ease-in-out, border-radius 300ms ease-in-out, margin-right 300ms ease-in-out ;
+    background-color: var(--main-color);
+    padding: 20px;
+    box-sizing: 20px;
+}
+.kozina-button-wp{
+    width: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 300ms ease-in-out, border-radius 300ms ease-in-out;
+    background-color: #0D1115;
+}
+.kozina-cart-wp:hover .kozina-cart-item{
+    width: 284px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+.kozina-cart-wp:hover .kozina-button-wp{
+    width:85px;
+    border-radius: 12px;
+}
+.buttons-korzina-wp{
+    display: flex;
+    gap: 15px;
+}
 .persAcc-categori-wp:hover, .persAcc-data-wp:hover, .sub-catalog--item:hover
 , .filter-wp:hover, .dop-foto-prod-item:hover, .main-foto-wp:hover, .basket-products-wp:hover, .basket-info-wp:hover{
     box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
@@ -2404,6 +2517,9 @@ input{
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .wraper-modal-entry{
+        padding: 41px 70px 82px;
+    }
     .hits-slider { 
         grid-auto-columns: calc((100% / 3) - 9px); 
     }
@@ -2477,6 +2593,15 @@ input{
     .controller-line::before{
         width: 120px;
     }
+}
+@media (min-width: 481px) and (max-width:767px){
+    .wraper-modal-entry{
+        padding: 31px 50px 62px;
+    }
+    .modal-login{
+        height: 100%;
+    }
+
 }
 
 
