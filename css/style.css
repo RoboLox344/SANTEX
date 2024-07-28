@@ -154,6 +154,9 @@ input{
     transition:  box-shadow 700ms ease-in-out;
     z-index: 100;
 }
+.login-button-text-header{
+    text-align: center;
+}
 .wrapper-header:hover{
     box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
 }
@@ -821,7 +824,6 @@ input{
     position: absolute;
     right: 32px;
     bottom: 32px;
-
 }
 .item-promo-1:hover, .item-promo-2:hover{
     box-shadow:0px 0px 10px var(--bg-shadow-hover-color) ;
@@ -2631,6 +2633,27 @@ input{
     }
     .modal-login{
         height: 100%;
+    }
+    .input-search{
+        display: none;
+    }
+    #login-button-text-header{
+        display: none;
+    }
+    .center{
+        display: none;
+    }
+    .wp-nav{
+        column-gap: 16px;
+    }
+    .container-item-promo{
+        display: none;
+    }
+    .item-big-promo{
+        width: 100%;
+    }
+    .hits-slider { 
+        grid-auto-columns: calc((100% / 2) - 9px); 
     }
 
 }
