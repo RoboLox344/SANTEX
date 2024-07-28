@@ -322,6 +322,8 @@ const DACHA__Base = [
                                   </p>
                               </div>
                           </div>
+                    </div>
+                        
         `;
   
         ROOT_PRODUCTS.insertAdjacentHTML("beforeend",HtmlCatalog);

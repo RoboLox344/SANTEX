@@ -119,3 +119,106 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', checkBlocksVisibility);
 
 });
+
+const ROOT_BASKET = document.body;
+console.log(ROOT_BASKET)
+const Button_basket_open = document.querySelector('.button-cart');
+console.log(Button_basket_open)
+/* redner basket */
+function BasketRender (){
+  let HtmlModalBasket = '';
+  HtmlModalBasket += `
+    <!-- модалльная корзина-->
+    <div class="kozina-modal-container-wp">
+        <div class="kozina-modal-wp">
+            <!--  -->
+            <div class="kozina-cart-wp">
+                <div class="kozina-cart-item">Насосная группа без смесителя Rommer - Ду25 (без насоса)</div>
+                <div class="kozina-button-wp">
+                    <button class="">
+                        <a class="nav-cart-cont" href="#">
+                            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-corzina">
+                                <path d="M1 21L11 11L1 21ZM21 1L11 11L21 1ZM11 11L1 1L11 11ZM11 11L21 21L11 11Z" fill="#7880B5"/>
+                                <path d="M1 21L11 11M11 11L21 1M11 11L1 1M11 11L21 21" stroke="#7880B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>  
+                    </button>
+                </div>
+            </div>
+            <!-- карт -->
+            <div class="kozina-cart-wp">
+                <div class="kozina-cart-item">Насосная группа без смесителя Rommer - Ду25 (без насоса)</div>
+                <div class="kozina-button-wp">
+                    <button class="">
+                        <a class="nav-cart-cont" href="#">
+                            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-corzina">
+                                <path d="M1 21L11 11L1 21ZM21 1L11 11L21 1ZM11 11L1 1L11 11ZM11 11L21 21L11 11Z" fill="#7880B5"/>
+                                <path d="M1 21L11 11M11 11L21 1M11 11L1 1M11 11L21 21" stroke="#7880B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>  
+                    </button>
+                </div>
+            </div>
+            <!-- карт -->
+            <div class="kozina-cart-wp">
+                <div class="kozina-cart-item">Насосная группа без смесителя Rommer - Ду25 (без насоса)</div>
+                <div class="kozina-button-wp">
+                    <button class="">
+                        <a class="nav-cart-cont" href="#">
+                            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-corzina">
+                                <path d="M1 21L11 11L1 21ZM21 1L11 11L21 1ZM11 11L1 1L11 11ZM11 11L21 21L11 11Z" fill="#7880B5"/>
+                                <path d="M1 21L11 11M11 11L21 1M11 11L1 1M11 11L21 21" stroke="#7880B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>  
+                    </button>
+                </div>
+            </div>
+            <!-- карт -->
+            <div class="kozina-cart-wp">
+                <div class="kozina-cart-item">Насосная группа без смесителя Rommer - Ду25 (без насоса)</div>
+                <div class="kozina-button-wp">
+                    <button class="">
+                        <a class="nav-cart-cont" href="#">
+                            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-corzina">
+                                <path d="M1 21L11 11L1 21ZM21 1L11 11L21 1ZM11 11L1 1L11 11ZM11 11L21 21L11 11Z" fill="#7880B5"/>
+                                <path d="M1 21L11 11M11 11L21 1M11 11L1 1M11 11L21 21" stroke="#7880B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>  
+                    </button>
+                </div>
+            </div>
+            <!-- карт -->
+            <div class="kozina-cart-wp">
+                <div class="kozina-cart-item">Насосная группа без смесителя Rommer - Ду25 (без насоса)</div>
+                <div class="kozina-button-wp">
+                    <button class="">
+                        <a class="nav-cart-cont" href="#">
+                            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-corzina">
+                                <path d="M1 21L11 11L1 21ZM21 1L11 11L21 1ZM11 11L1 1L11 11ZM11 11L21 21L11 11Z" fill="#7880B5"/>
+                                <path d="M1 21L11 11M11 11L21 1M11 11L1 1M11 11L21 21" stroke="#7880B5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>  
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons-korzina-wp">
+            <a class="button button-korzina" href="korzina.html" id="">Оформить</a>
+            <button class="button button-korzina" id="BasketClose">Закрыть</button>
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  `;
+  ROOT_BASKET.insertAdjacentHTML("beforeend", HtmlModalBasket);
+};
+BasketRender();
+/* ......................................................................... */
+const active = document.querySelector('.kozina-modal-container-wp');
+Button_basket_open.addEventListener('click', function(){
+  active.classList.toggle('kozina-modal-container-wp-active');
+});
+/* ........................................................................ */
+const Button_Basket_Close = document.getElementById('BasketClose');
+Button_Basket_Close.addEventListener('click', function(){
+  active.classList.remove('kozina-modal-container-wp-active');
+});
