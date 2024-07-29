@@ -2762,7 +2762,7 @@ input{
         row-gap: 20px;
     }
     .hits-slider { 
-        grid-auto-columns: calc((100% / 1) - 9px); 
+        grid-auto-columns: calc((100% / 1)); 
     }
     .haeder-burger{
         display: block;
@@ -2782,11 +2782,58 @@ input{
     .wrapper-catalog{
         grid-template-columns: repeat( 1, 1fr);
     }
-    .img-catalog{
-        max-height: 50px;
-    }
     .container {
         padding: 0 15px;
+    }
+    .promo-text{
+        font-size: 12px;
+    }
+    .promo-text--title {
+        font-size: 20px;
+    }
+    .text-title {
+        font-size: 22px;
+    }
+    .cart{
+        font-size: 16px;
+    }
+    .button-promo{
+        font-size: 12px;
+    }
+    .button-promo {
+        max-width: 160px;
+    }
+    .link-catalog {
+        font-size: 14px;
+    }
+    .text-title--catalog{
+        font-size: 20px;
+    }
+    .text-contaner--sale{
+        font-size: 16px;
+    }
+    .text-title-sale {
+        font-size: 18px;
+    }
+    .text-contaner--sale:nth-last-child(n) {
+        margin-bottom: 20px;
+    }
+    .advertisement-sale {
+        min-height: 100px;
+    }
+    .text-title-sale{
+        margin-bottom: 20px;
+    }
+    .link-sale {
+        font-size: 16px;
+        margin-bottom: 20px;
+        background-position: right 2px;
+    }
+    .display-none-link-sale{
+        display: none;
+    }
+    .wrap-cart-sale {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
