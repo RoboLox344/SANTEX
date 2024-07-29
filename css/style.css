@@ -2761,8 +2761,9 @@ input{
         flex-direction: column;
         row-gap: 20px;
     }
-    .hits-slider { 
-        grid-auto-columns: calc((100% / 1)); 
+    .hits-slider {
+        grid-auto-columns: calc((100% / 2) - 9px);
+        min-height: 200px;
     }
     .haeder-burger{
         display: block;
@@ -2780,7 +2781,7 @@ input{
         padding-right: 0;
     }
     .wrapper-catalog{
-        grid-template-columns: repeat( 1, 1fr);
+        grid-template-columns: repeat( 2, 1fr);
     }
     .container {
         padding: 0 15px;
@@ -2807,7 +2808,7 @@ input{
         font-size: 14px;
     }
     .text-title--catalog{
-        font-size: 20px;
+        font-size: 16px;
     }
     .text-contaner--sale{
         font-size: 16px;
@@ -2821,6 +2822,7 @@ input{
     .advertisement-sale {
         min-height: 100px;
         width: 40%;
+        display: none;
         
     }
     .wraper-sale--text {
@@ -2839,10 +2841,44 @@ input{
         display: none;
     }
     .wrap-cart-sale {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 270px);
+        max-height: 600px;
     }
     .wraper-sale {
         column-gap: 15px;
+    }
+    .container-hits-bt--rt {
+        position: absolute;
+        top: 52%;
+        right: 0;
+    }
+    .container-hits-bt--lf {
+        position: absolute;
+        top: 52%;
+        left: 0px;
+    }
+    .img-tovar {
+        height: 100%;
+        width: 100%;
+        height: 100px;
+        max-width: 192px;
+    }
+    .cart {
+        min-height: 200px;
+    }
+    .cart-wrapper {
+        height: 270px;
+    }
+    .catalog-wrapper-img {
+        min-height: 50px;
+    }
+    .catalog-item {
+        min-height: 100px;
+        padding: 11px 15px;
+    }
+    .dop {
+        margin-bottom: 10px;
     }
 }
 
