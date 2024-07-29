@@ -2820,6 +2820,12 @@ input{
     }
     .advertisement-sale {
         min-height: 100px;
+        width: 40%;
+        
+    }
+    .wraper-sale--text {
+        padding: 0 10px;
+        box-sizing: border-box;
     }
     .text-title-sale{
         margin-bottom: 20px;
