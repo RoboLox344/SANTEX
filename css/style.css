@@ -181,6 +181,12 @@ input{
     width: max(378px,450px );
     z-index: 999;
 }
+.haeder-burger{
+    display: none;
+}
+.header-item-list{
+    display: block;
+}
 .button-search{
     display: flex;
     align-items: center;
@@ -2655,8 +2661,125 @@ input{
     .hits-slider { 
         grid-auto-columns: calc((100% / 2) - 9px); 
     }
+    .haeder-burger{
+        display: block;
+    }
+    .header-item-list{
+        display: none;
+    }
+    .form-search{
+        width: 20px;
+    }
+    .wp-nav{
+        width:20px; 
+        order: 6;
+        padding-right: 25px;
+    }
+    .login-wraper-button{
+        width: auto;
+        padding-right: 0;
+    }
+    .wrapper-catalog{
+        grid-template-columns: repeat( 2, 1fr);
+    }
+    .img-catalog{
+        
+        max-width: 160px;
+        width:100% ;
+        height:100%;
+    }
+    .catalog-wrapper-img{
+        min-height: 60px;
+    }
+    .catalog-item{
+        min-height: 100px;
+    }
+    .wrap-cart-sale {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .advertisement-sale {
+        max-width: 40%;
+    }
+    .wrapper-blog--layer1, .wrapper-blog--layer2 {
+        width: 100%;
+        min-height: 200px;
+        display: flex;
+        gap: 38px;
+    }
+    .blog-bg-3, .blog-bg-2 {
+        display: none;
+    }
+    .blog-item-big {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+    }
+    .reviews-wrapper {
+        grid-auto-columns: calc((100% / 1) - 12px);
+    }
+    .footer-text--title{
+        font-size: 14px;
+    }
+    .footer-text--title, .footer-text, .footer-catalog-links, .footer-help-link, .footer-address, .footer-address--info {
+        font-size: 10px;
+    }
+    
 
 }
+@media  (max-width: 480px) {
+    .wraper-modal-entry{
+        padding: 31px 50px 31px;
+    }
+    .wraper-modal-login{
+        padding: 31px 50px 31px;
+    }
+    .modal-login{
+        height: 100%;
+    }
+    .input-search{
+        display: none;
+    }
+    #login-button-text-header{
+        display: none;
+    }
+    .center{
+        display: none;
+    }
+    .wp-nav{
+        column-gap: 16px;
+    }
+    .container-item-promo{
+        display: none;
+    }
+    .item-big-promo{
+        width: 100%;
+    }
+    .hits-slider { 
+        grid-auto-columns: calc((100% / 1) - 9px); 
+    }
+    .haeder-burger{
+        display: block;
+    }
+    .header-item-list{
+        display: none;
+    }
+    .wp-nav{
+        width:20px; 
+        order: 6;
+        padding-right: 25px;
+    }
+    .login-wraper-button{
+        width: auto;
+        padding-right: 0;
+    }
+    .wrapper-catalog{
+        grid-template-columns: repeat( 1, 1fr);
+    }
+    .img-catalog{
+        max-height: 50px;
+    }
+}
+
 
 
 
