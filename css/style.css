@@ -2835,6 +2835,9 @@ input{
     .wrap-cart-sale {
         grid-template-columns: repeat(1, 1fr);
     }
+    .wraper-sale {
+        column-gap: 15px;
+    }
 }
 
 
