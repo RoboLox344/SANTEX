@@ -3476,6 +3476,32 @@ body.light-theme{
         border-bottom-right-radius: 20px;
         padding: 20px;
     }
+    .container-footer--cont, .container-footer--katalog, .container-footer--compani {
+        max-width: 272px;
+        border-bottom: 1px solid var(--decorative-color);
+    }
+    .footer-text--title, .footer-text, .footer-catalog-links, .footer-help-link, .footer-address, .footer-address--info {
+        font-size: 12px;
+        transition: color 300ms ease-in-out;
+    }
+    .conatainer-footer {
+        min-height: 341px;
+        padding: 25px;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        vertical-align: top;
+        box-sizing: border-box;
+        border-radius: 15px;
+        background-color: #333333;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .footer-text--title{
+        font-size: 16px;
+    }
+
 }
 
 
