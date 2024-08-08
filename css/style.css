@@ -3400,6 +3400,7 @@ body.light-theme{
     .wrapper-blog--layer1, .wrapper-blog--layer2 {
         width: 100%;
         min-height: 200px;
+        gap: 17px;
     }
     .wrapper-imet-lr1-big, .wrapper-imet-lr1, .wrapper-imet-lr2, .wrapper-imet-lr2-big {
         background-color: var(--main-color);
@@ -3414,6 +3415,9 @@ body.light-theme{
     }
     .links-blog {
         font-size: 10px;
+    }
+    .wrapper-blog {
+        gap: 17px;
     }
 }
 
