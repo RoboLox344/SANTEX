@@ -3501,6 +3501,14 @@ body.light-theme{
     .footer-text--title{
         font-size: 16px;
     }
+    .wrap-cart-sale {
+        max-height: 600px;
+        grid-auto-columns: calc((100% / 2) - 7px);
+        grid-auto-flow: column;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        overflow-x: scroll;
+    }
 
 }
 
